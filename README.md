@@ -1,6 +1,6 @@
 # InfoGAN-tensorflow
 Slightly changed codes from [this repository](https://github.com/AndyHsiao26/InfoGAN-Tensorflow). \
-+ [official code](https://github.com/openai/InfoGAN)
+[This](https://github.com/openai/InfoGAN) is the official code by the author of the paper.
 
 ## Original paper
 [InfoGAN: Interpretable Representation Learning by Information Maximizing Generative Adversarial Nets](https://arxiv.org/pdf/1606.03657.pdf) 
@@ -20,9 +20,9 @@ Maximize mutual information \
 
 G(z,c) -> D -> **Qcat** -> score for each category \
 G(z,c) -> D -> **Qcont** -> statistics of the estimated distribution: mean and variance \
-Q loss = **cross entropy**(categorical code, **Qcat**(G(z, c))) + 0.1(lamda) * **gaussian NLL**(continuous code, **Qcont**(G(z, c))) \
-Discriminator loss = original D loss + Q loss \
-Generator loss = original G loss + Q loss
+**Q loss** = **cross entropy**(categorical code, **Qcat**(G(z, c))) + 0.1(lamda) * **gaussian NLL**(continuous code, **Qcont**(G(z, c))) \
+Discriminator loss = original D loss **+ Q loss** \
+Generator loss = original G loss **+ Q loss**
 
 ## Results
 ![Overview](https://github.com/Sooram/InfoGAN-tensorflow/blob/master/test/continuous_1_col_cat_row_change.png) 
