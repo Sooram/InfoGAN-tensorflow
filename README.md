@@ -18,8 +18,8 @@ Maximize mutual information \
 <=> Minimize NLL(negative log likelihood)
 
 Q loss = cross entropy(categorical code, Qcat(G(z, c))) + 0.1(lamda) * gaussian NLL(continuous code, Qcont(G(z, c))) \
-Discriminator loss = D loss + Q loss \
-Generator loss = G loss + Q loss
+Discriminator loss = original D loss + Q loss \
+Generator loss = original G loss + Q loss
 
 ## Results
 ![Overview](https://github.com/Sooram/InfoGAN-tensorflow/blob/master/test/continuous_1_col_cat_row_change.png) 
