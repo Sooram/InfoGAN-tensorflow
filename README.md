@@ -22,6 +22,7 @@ Discriminator loss = D loss + Q loss \
 Generator loss = G loss + Q loss
 
 ## Results
-![Overview](https://github.com/Sooram/InfoGAN-tensorflow/blob/master/test/continuous_1_col_cat_row_change.png) thickness
-![Overview](https://github.com/Sooram/InfoGAN-tensorflow/blob/master/test/continuous_2_col_cat_row_change.png) tilt
-![Overview](https://github.com/Sooram/InfoGAN-tensorflow/blob/master/test/continuous_0_col_cat_row_change.png) Seems like this continuous code doesn't have any special attribute mapped. 
+![Overview](https://github.com/Sooram/InfoGAN-tensorflow/blob/master/test/continuous_1_col_cat_row_change.png) thickness \
+![Overview](https://github.com/Sooram/InfoGAN-tensorflow/blob/master/test/continuous_2_col_cat_row_change.png) tilt \
+![Overview](https://github.com/Sooram/InfoGAN-tensorflow/blob/master/test/continuous_0_col_cat_row_change.png) \
+Seems like this continuous code doesn't have any special attribute mapped. 
