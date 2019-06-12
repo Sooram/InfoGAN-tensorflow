@@ -2,7 +2,7 @@
 Slightly changed codes from [this repository](https://github.com/AndyHsiao26/InfoGAN-Tensorflow).
 
 ## Original paper
-[InfoGAN: Interpretable Representation Learning by Information Maximizing Generative Adversarial Nets](https://arxiv.org/pdf/1606.03657.pdf)
+[InfoGAN: Interpretable Representation Learning by Information Maximizing Generative Adversarial Nets](https://arxiv.org/pdf/1606.03657.pdf) [original code](https://github.com/openai/InfoGAN)
 
 "This paper describes InfoGAN, an information-theoretic extension to the Generative Adversarial Network that is able to learn disentangled representations in a completely unsupervised manner. InfoGAN is a generative adversarial network that also maximizes the mutual information between a small subset of the latent variables and the observation."
 
@@ -15,8 +15,10 @@ Mutual information: I(c; G(z, c)) = H(c) − H(c|G(z, c)) = ... ≥ Ec∼P (c),x
 
 Maximize mutual information \
 <=> Leave out all the constant factors & Maximize Q(c|x): estimate the likelihood of seeing that code for the given generated input x (Maximum Likelihood Estimation) \
-<=> Minimize NLL(negative log likelihood)
+<=> Minimize NLL(negative log likelihood) of Q(c|x)
 
+G(z,c) -> D -> **Qcat** -> score for each category \
+G(z,c) -> D -> **Qcont** -> statistics of the estimated distribution: mean and variance \
 Q loss = cross entropy(categorical code, Qcat(G(z, c))) + 0.1(lamda) * gaussian NLL(continuous code, Qcont(G(z, c))) \
 Discriminator loss = original D loss + Q loss \
 Generator loss = original G loss + Q loss
