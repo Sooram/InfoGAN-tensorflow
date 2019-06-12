@@ -196,7 +196,7 @@ def train(args, model, sess):
     # load previous model
     model.load(sess, args.model_dir)  
 
-    steps_per_epoch = mnist.train.labels.shape[0] // model.args.batch_size
+    steps_per_epoch = mnist.train.labels.shape[0] // args.batch_size
 
     for epoch in range(args.epoch):
         for step in range(steps_per_epoch):
@@ -241,7 +241,6 @@ def inference(args, model, sess):
 
         # load model
         model.load(sess, args.model_dir)
-        
 
         for q in range(args.num_cont):
             col = []
@@ -250,7 +249,7 @@ def inference(args, model, sess):
                 for d in range(11):
                     z_cat = [c]
                     z_cont = np.zeros([1, args.num_cont])
-                    z_cont[0,q] = -2 + d*0.4
+                    z_cont[0,q] = -2 + d*0.4     # -2 ~ 2
                     z_rand = np.random.uniform(-1, 1, size=[1, args.num_rand])
 
                     g = sess.run([model.g], feed_dict={model.z_cat: z_cat,
