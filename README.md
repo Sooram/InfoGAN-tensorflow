@@ -24,7 +24,7 @@ Generator loss = G loss + Q loss
 ## Results
 ![Overview](https://github.com/Sooram/InfoGAN-tensorflow/blob/master/test/continuous_1_col_cat_row_change.png) 
 ![Overview](https://github.com/Sooram/InfoGAN-tensorflow/blob/master/test/continuous_2_col_cat_row_change.png) \
-Thickness and tilt are changing. \
+Thickness and tilt are changing. 
 
 ![Overview](https://github.com/Sooram/InfoGAN-tensorflow/blob/master/test/continuous_0_col_cat_row_change.png) \
 I added another continuous latent code, but seems like this one doesn't have any special attribute mapped. 
