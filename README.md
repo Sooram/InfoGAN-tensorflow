@@ -1,6 +1,6 @@
 # InfoGAN-tensorflow
 Slightly changed codes from [this repository](https://github.com/AndyHsiao26/InfoGAN-Tensorflow). \
-[This](https://github.com/openai/InfoGAN) is the official code by the author of the paper.
+Also referenced [this repository](https://github.com/openai/InfoGAN).
 
 ## Original paper
 [InfoGAN: Interpretable Representation Learning by Information Maximizing Generative Adversarial Nets](https://arxiv.org/pdf/1606.03657.pdf) 
